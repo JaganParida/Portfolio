@@ -670,14 +670,19 @@ footer div {
     padding-top: 430px;
   }
 }
-@media (min-width: 355px) and (max-width: 380px) {
+@media (min-width: 355px) and (max-width: 360px) {
   #page1 {
-    padding-top: 378px;
+    padding-top: 380px;
+  }
+}
+@media (min-width: 360px) and (max-width: 380px) {
+  #page1 {
+    padding-top: 380px;
   }
 }
 @media (min-width: 380px) and (max-width: 425px) {
   #page1 {
-    padding-top: 245px;
+    padding-top: 230px;
   }
 }
 @media (min-width: 425px) and (max-width: 768px) {
