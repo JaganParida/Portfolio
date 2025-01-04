@@ -391,7 +391,7 @@ form {
 }
 input {
   width: 100%;
-  border: 3px solid #2e2aad;
+  border: 2px solid #2e2aad;
   background-color: #171721;
   height: 50px;
   cursor: text;
@@ -413,11 +413,11 @@ button:focus {
 }
 input:focus,
 textarea:focus {
-  border: 3px solid rgb(128, 0, 255);
+  border: 2px solid rgb(128, 0, 255);
 }
 
 form textarea {
-  border: 3px solid #2e2aad;
+  border: 2px solid #2e2aad;
   background-color: #171721;
   color: #d4d4d4;
   padding-left: 15px;
@@ -671,34 +671,3 @@ footer div {
     cursor: pointer;
   }
 }
-
-/* @media (min-width: 320px) and (max-width: 355px) {
-  #page1 {
-    padding-top: 430px;
-  }
-}
-@media (min-width: 355px) and (max-width: 360px) {
-  #page1 {
-    padding-top: 380px;
-  }
-}
-@media (min-width: 360px) and (max-width: 380px) {
-  #page1 {
-    padding-top: 380px;
-  }
-}
-@media (min-width: 380px) and (max-width: 425px) {
-  #page1 {
-    padding-top: 230px;
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  #page1 {
-    padding-top: 200px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  #page1 {
-    padding-top: 270px;
-  }
-} */
