@@ -72,9 +72,6 @@ nav #profile:hover {
   text-align: center;
   padding-top: 135px;
 }
-#skills_head {
-  padding-top: 70px;
-}
 
 /*Pages*/
 .page {
@@ -603,9 +600,7 @@ footer div {
     align-items: center;
     width: 80%;
   }
-  .note p {
-    text-align: center;
-  }
+
   #resume {
     display: flex;
     justify-content: center;
@@ -626,9 +621,6 @@ footer div {
   }
 
   /*Skills*/
-  #skills {
-    display: flex;
-  }
   .header {
     font-size: 40px;
   }
@@ -639,16 +631,6 @@ footer div {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  /*Education*/
-  #edu {
-    display: flex;
-  }
-
-  /*Projects*/
-  #projects {
-    display: flex;
   }
 
   /*Contact*/
