@@ -169,7 +169,6 @@ div span {
   align-items: center;
   background-color: #191924;
   font-size: 16px;
-  color: #fff;
   border-radius: 100px;
 }
 .resume button::after {
@@ -193,7 +192,7 @@ div span {
   align-items: center;
   height: 100%;
   width: 100%;
-  color: #8b0fff;
+  color: #854ce6;
 }
 .resume button a:hover {
   color: white;
