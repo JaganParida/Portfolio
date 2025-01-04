@@ -36,7 +36,7 @@ header a:hover {
   color: white;
   font-family: "Lobster", sans-serif;
   font-weight: 200;
-  color: #8a2be2;
+  color: #fff;
   font-size: 30px;
 }
 .navlist nav {
@@ -82,6 +82,9 @@ nav #profile:hover {
 }
 
 /*Page1*/
+#about_head {
+  padding-top: 0;
+}
 #page1 {
   height: 100%;
   width: 100%;
@@ -128,10 +131,16 @@ nav #profile:hover {
   padding: 2px 20px 2px 20px;
 }
 span {
-  color: yellow;
+  color: rgb(112, 4, 189);
 }
 span .typed-cursor {
   margin-left: 0px;
+}
+.auto-type {
+  margin: 20px 5px 20px 20px;
+}
+.typed-cursor {
+  margin: 0;
 }
 div span {
   font-size: 35px;
@@ -188,11 +197,6 @@ div span {
 }
 .resume button a:hover {
   color: white;
-}
-
-/*Page3*/
-#page2 {
-  margin-top: 0;
 }
 
 /*Skills*/
@@ -357,7 +361,7 @@ div span {
   height: 1005;
 }
 
-/*Page6*/
+/*Page5*/
 #page5 {
   display: block;
   height: 100%;
@@ -476,6 +480,7 @@ footer div {
   header {
     display: flex;
     width: 100%;
+    padding: 10px;
   }
   #Portfolio a {
     font-size: 25px;
@@ -529,7 +534,7 @@ footer div {
   #menuicon i {
     visibility: visible;
     color: white;
-    font-size: 20px;
+    font-size: 23px;
   }
 
   /*Pages*/
@@ -539,13 +544,16 @@ footer div {
   }
 
   /*Page1*/
+  #about_head {
+    padding-top: 0;
+  }
   #page1 {
     position: relative;
     top: 70px;
   }
   #home img {
     height: 236px;
-    width: 200px;
+    width: 165px;
   }
   #home {
     display: flex;
@@ -604,20 +612,6 @@ footer div {
   #resume {
     display: flex;
     justify-content: center;
-  }
-
-  /*Page2*/
-  #page2 {
-    display: flex;
-    flex-direction: reverse;
-  }
-  #aboutMe img {
-    height: 236px;
-  }
-  #aboutMe h1 {
-    text-align: center;
-    font-size: 34px;
-    line-height: 56px;
   }
 
   /*Skills*/
