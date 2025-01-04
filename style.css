@@ -227,7 +227,7 @@ div span {
   color: #fff;
   background-color: #171721;
   position: relative;
-  border: 2px solid rgb(128, 0, 255);
+  border: 0.1px solid rgb(128, 0, 255);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 }
 #skill {
@@ -240,7 +240,7 @@ div span {
   height: 30px;
 }
 #skills #webdev {
-  border: 2px solid #4448ff;
+  border: 1px solid #4448ff;
   border-radius: 15px;
   padding: 8px;
   font-size: 12px;
@@ -474,7 +474,7 @@ footer div {
 }
 
 /*Media Query*/
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 888px) {
   /*header*/
   header {
     display: flex;
@@ -538,17 +538,24 @@ footer div {
   /*Pages*/
   .page {
     width: 100%;
+    height: 100%;
   }
 
   /*Page1*/
+  #page1 {
+    position: relative;
+    top: 70px;
+  }
   #home img {
     height: 236px;
+    width: 200px;
   }
   #home {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
   }
   .name h1 {
     text-align: center;
@@ -665,7 +672,7 @@ footer div {
   }
 }
 
-@media (min-width: 320px) and (max-width: 355px) {
+/* @media (min-width: 320px) and (max-width: 355px) {
   #page1 {
     padding-top: 430px;
   }
@@ -694,4 +701,4 @@ footer div {
   #page1 {
     padding-top: 270px;
   }
-}
+} */
