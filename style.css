@@ -131,7 +131,7 @@ nav #profile:hover {
   padding: 2px 20px 2px 20px;
 }
 span {
-  color: indigo;
+  color: rgb(139, 0, 238);
 }
 span .typed-cursor {
   margin-left: 0px;
