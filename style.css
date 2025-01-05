@@ -592,6 +592,7 @@ footer div {
     font-size: 15px;
     align-items: center;
     width: 100%;
+    height: 74px;
   }
   .container h2 {
     display: flex;
