@@ -4,4 +4,4 @@ I'm a Btech CSE student and a passionate full-stack developer and problem solver
 
 # view live through this link
 
-https://github.com/JaganParida/Portfolio
+https://jaganparida.github.io/Portfolio/
