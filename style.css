@@ -101,8 +101,8 @@ nav #profile:hover {
   width: 100%;
 }
 #home img {
-  height: 370px;
-  border-radius: 100px;
+  height: 350px;
+  border-radius: 10px;
 }
 .quote {
   display: flex;
@@ -302,6 +302,7 @@ div span {
   transform: translateY(-12px) scale(1.05);
   box-shadow: 0.5px 0.5px 50px rgb(0, 0, 0);
 }
+
 #projects img {
   width: 100%;
   height: 153px;
