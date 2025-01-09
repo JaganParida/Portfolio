@@ -101,8 +101,9 @@ nav #profile:hover {
   width: 100%;
 }
 #home img {
-  height: 350px;
-  border-radius: 10px;
+  height: 400px;
+  border-radius: 60px;
+  width: 315px;
 }
 .quote {
   display: flex;
@@ -552,8 +553,9 @@ footer div {
     top: 70px;
   }
   #home img {
-    height: 236px;
+    height: 220px;
     width: 165px;
+    border-radius: 91px;
   }
   #home {
     display: flex;
