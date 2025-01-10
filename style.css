@@ -103,7 +103,7 @@ nav #profile:hover {
 #home img {
   height: 400px;
   border-radius: 60px;
-  width: 315px;
+  width: 300px;
 }
 .quote {
   display: flex;
@@ -554,8 +554,8 @@ footer div {
   }
   #home img {
     height: 220px;
-    width: 165px;
-    border-radius: 91px;
+    width: 150px;
+    border-radius: 75px;
   }
   #home {
     display: flex;
