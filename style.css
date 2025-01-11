@@ -171,6 +171,7 @@ div span {
   background-color: #191924;
   font-size: 16px;
   border-radius: 100px;
+  transition: 0.2s ease-in-out;
 }
 .resume button::after {
   position: absolute;
@@ -184,7 +185,6 @@ div span {
 .resume button:hover {
   z-index: 0;
   color: #2b2929;
-  font-weight: 600;
 }
 .resume button a {
   text-decoration: none;
@@ -196,7 +196,7 @@ div span {
   color: #854ce6;
 }
 .resume button a:hover {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /*Skills*/
