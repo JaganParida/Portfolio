@@ -289,7 +289,7 @@ div span {
 #projects {
   flex-basis: 320px;
   display: flex;
-  height: 400px;
+  height: 530px;
   border-radius: 12px;
   margin: 20px;
   flex-wrap: wrap;
@@ -311,19 +311,23 @@ div span {
   display: block;
 }
 #projects span {
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #8c11ff;
+  background-color: #8e14ffea;
   font-size: 12px;
-  color: black;
+  color: rgb(27, 24, 24);
   border-radius: 5px;
-  padding: 2px 4px;
+  padding: 13px 9px;
   margin: 4px 10px 2px 5px;
   border: none;
 }
 #projects p {
   color: #abb1bf;
+  text-align: justify;
+  font-size: 15px;
+  font-weight: 400;
 }
 #projects .viewLink {
   width: 100%;
@@ -361,7 +365,10 @@ div span {
   width: 100%;
   height: 1005;
 }
-
+.uses {
+  display: flex;
+  flex-wrap: wrap;
+}
 /*Page5*/
 #page5 {
   display: block;
