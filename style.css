@@ -366,12 +366,14 @@ div span {
 #projects .viewLink .live:hover {
   background-color: indigo;
 }
-#projects .viewLink button a {
+.viewLink button a {
   text-decoration: none;
   color: white;
-  display: block;
   width: 100%;
-  height: 1005;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .uses {
   display: flex;
