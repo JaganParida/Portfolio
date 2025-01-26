@@ -1,7 +1,7 @@
 var typed = new Typed(".auto-type", {
   strings: [
     "CSE Student",
-    "Web Developer",
+    "Problem Solver",
     "UI Designer",
     "Programmer",
     "Fullstack Developer",
