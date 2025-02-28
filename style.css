@@ -9,7 +9,7 @@ body {
   overflow-x: auto;
 }
 body::-webkit-scrollbar {
-  overflow: hidden;
+  display: none;
 }
 
 /*Header*/
