@@ -147,7 +147,6 @@ div span {
   font-size: 35px;
   font-weight: 600;
   margin: 20px;
-  cursor: pointer;
 }
 #link {
   display: flex;
@@ -172,6 +171,8 @@ div span {
   font-size: 16px;
   border-radius: 100px;
   transition: 0.2s ease-in-out;
+  color: #854ce6;
+  cursor: pointer;
 }
 .resume button::after {
   position: absolute;
@@ -186,16 +187,10 @@ div span {
   z-index: 0;
   color: #2b2929;
 }
-.resume button a {
+.resume a {
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  color: #854ce6;
 }
-.resume button a:hover {
+.resume a button:hover {
   color: rgb(255, 255, 255);
 }
 
@@ -324,7 +319,6 @@ div span {
   padding: 24px;
   background-color: rgb(23, 23, 33);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
-  cursor: pointer;
   animation: appear 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
@@ -385,6 +379,8 @@ div span {
   font-size: 15px;
   transition: 0.35s ease-in-out;
   margin-right: 5px;
+  color: rgb(183, 183, 183);
+  cursor: pointer;
 }
 #projects .viewLink .live {
   background-color: #8b0fff;
@@ -395,11 +391,8 @@ div span {
 #projects .viewLink .live:hover {
   background-color: indigo;
 }
-.viewLink button a {
+.viewLink a {
   text-decoration: none;
-  color: white;
-  height: 100%;
-  width: 100%;
 }
 .uses {
   display: flex;
