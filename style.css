@@ -230,6 +230,9 @@ div span {
   position: relative;
   border: 0.1px solid rgb(128, 0, 255);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 #skill {
   display: flex;
@@ -251,6 +254,17 @@ div span {
   margin: 5px;
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
 /*Education*/
 .edu {
   display: flex;
@@ -266,6 +280,9 @@ div span {
   font-size: 30px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
+  animation: side 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .edu div div h6 {
   font-weight: 500;
@@ -276,6 +293,16 @@ div span {
 }
 #education_head {
   padding-bottom: 20px;
+}
+@keyframes side {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 /*Projects*/
@@ -298,6 +325,9 @@ div span {
   background-color: rgb(23, 23, 33);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
   cursor: pointer;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 #projects:hover {
   transform: translateY(-12px) scale(1.05);
