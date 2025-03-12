@@ -107,9 +107,11 @@ nav #profile :hover {
   width: 100%;
 }
 #home img {
+  width: 400px;
   height: 400px;
   border-radius: 50%;
-  width: 400px;
+  object-fit: cover;
+  margin: 20px 0;
 }
 .quote {
   display: flex;
