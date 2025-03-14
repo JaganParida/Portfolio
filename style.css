@@ -316,13 +316,14 @@ div span {
   flex-wrap: wrap;
   width: 100%;
 }
-#projects {
+.projects {
+  flex-direction: column;
+  gap: 5px;
   flex-basis: 320px;
   display: flex;
-  height: 500px;
+  height: 380px;
   border-radius: 12px;
   margin: 20px;
-  flex-wrap: wrap;
   transition: 0.35s ease-in-out;
   padding: 24px;
   background-color: rgb(23, 23, 33);
@@ -330,53 +331,100 @@ div span {
   animation: appear 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  cursor: pointer;
 }
-#projects:hover {
+
+.projects:hover {
   transform: translateY(-12px) scale(1.05);
   box-shadow: 0.5px 0.5px 50px rgb(0, 0, 0);
 }
 
-#projects img {
+.projects img {
   width: 100%;
   height: 153px;
   border-radius: 6px;
   display: block;
+  object-fit: cover;
 }
-#projects span {
+.projects span {
   height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #212122;
+  background-color: #110612;
   font-size: 12px;
-  color: #8330f7;
+  color: hsl(265, 100%, 56%);
   border-radius: 10px;
   padding: 13px 9px;
   margin: 4px 10px 2px 5px;
   border: none;
   font-weight: 500;
 }
-#projects h3 {
+.projects h3 {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
-  text-align: center;
   margin: 10px 0px 10px 0px;
 }
-#projects p {
+.projects p {
   color: #abb1bf;
   text-align: justify;
   font-size: 13px;
   font-weight: 400;
 }
-#projects .viewLink {
+
+.preview {
+  display: flex;
+  height: 50%;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 12px;
+  margin: 50px 12px;
+  transition: 0.35s ease-in-out;
+  padding: 0px 24px 24px 24px;
+  background-color: rgb(23, 23, 33);
+}
+.preview img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+.preview span {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #110612;
+  font-size: 12px;
+  color: hsl(265, 100%, 56%);
+  border-radius: 10px;
+  padding: 13px 9px;
+  margin: 4px 10px 2px 5px;
+  border: none;
+  font-weight: 500;
+}
+.preview h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+
+  margin: 10px 0px 10px 0px;
+}
+.preview p {
+  color: #abb1bf;
+  text-align: justify;
+  font-size: 13px;
+  font-weight: 400;
+}
+.preview .viewLink {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
+  margin: 10px 10px;
 }
-#projects .viewLink button {
-  width: 120px;
+.preview .viewLink button {
+  width: 100%;
   background-color: #4f63ff;
   border: none;
   padding: 9px;
@@ -390,21 +438,52 @@ div span {
   color: rgb(226, 226, 226);
   cursor: pointer;
 }
-#projects .viewLink .live {
+.preview .viewLink .live {
   background-color: #8b0fff;
+  width: 100%;
 }
-#projects .viewLink .view:hover {
+.preview .viewLink .view:hover {
   background-color: rgb(15, 0, 149);
 }
-#projects .viewLink .live:hover {
+.preview .viewLink .live:hover {
   background-color: indigo;
 }
 .viewLink a {
+  display: flex;
   text-decoration: none;
+  width: 100%;
+  gap: 12px;
 }
 .uses {
   display: flex;
   flex-wrap: wrap;
+}
+
+.projects-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.projects-preview .preview {
+  display: none;
+}
+.projects-preview .preview i {
+  display: flex;
+  justify-self: flex-end;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  margin: 7px 7px;
+}
+.projects-preview .preview.active {
+  display: inline-block;
 }
 /*Page5*/
 #page5 {
