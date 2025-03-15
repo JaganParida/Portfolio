@@ -76,6 +76,9 @@ nav #profile :hover {
   color: #5767de;
   text-align: center;
   padding-top: 135px;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 /*Pages*/
@@ -219,7 +222,7 @@ div span {
   width: 100%;
   text-align: center;
 }
-#skills {
+.skills {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,19 +240,31 @@ div span {
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
-#skill {
+.first {
+  animation: side1 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+.second {
+  animation: side2 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.skill {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-#skills img {
+.skills img {
   height: 30px;
+  margin-right: 5px;
 }
-#skills #webdev {
+.skills #webdev {
   border: 1px solid #4448ff;
   border-radius: 15px;
-  padding: 8px;
+  padding: 5px 11px;
   font-size: 12px;
   justify-content: center;
   display: flex;
@@ -283,9 +298,6 @@ div span {
   font-size: 30px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
-  animation: side 5s linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 .edu div div h6 {
   font-weight: 500;
@@ -297,10 +309,20 @@ div span {
 #education_head {
   padding-bottom: 20px;
 }
-@keyframes side {
+@keyframes side1 {
   from {
     opacity: 0;
     transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes side2 {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
@@ -321,7 +343,7 @@ div span {
   gap: 5px;
   flex-basis: 320px;
   display: flex;
-  height: 380px;
+  height: 395px;
   border-radius: 12px;
   margin: 20px;
   transition: 0.35s ease-in-out;
@@ -346,14 +368,19 @@ div span {
   display: block;
   object-fit: cover;
 }
+.projects .time {
+  margin: 0;
+  color: grey;
+  font-size: 15px;
+}
 .projects span {
   height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #110612;
+  background-color: rgb(38 18 63);
   font-size: 12px;
-  color: hsl(265, 100%, 56%);
+  color: rgb(106 0 255);
   border-radius: 10px;
   padding: 13px 9px;
   margin: 4px 10px 2px 5px;
@@ -364,7 +391,7 @@ div span {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 0px 0px;
 }
 .projects p {
   color: #abb1bf;
@@ -394,9 +421,9 @@ div span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #110612;
+  background-color: rgb(38 18 63);
   font-size: 12px;
-  color: hsl(265, 100%, 56%);
+  color: rgb(106 0 255);
   border-radius: 10px;
   padding: 13px 9px;
   margin: 4px 10px 2px 5px;
@@ -407,8 +434,12 @@ div span {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
-
   margin: 10px 0px 10px 0px;
+}
+.preview .time {
+  margin: 0;
+  color: grey;
+  font-size: 15px;
 }
 .preview p {
   color: #abb1bf;
@@ -419,9 +450,10 @@ div span {
 .preview .viewLink {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
   align-items: flex-end;
-  margin: 10px 10px;
+  margin-top: 10px;
+  justify-content: center;
+  gap: 12px;
 }
 .preview .viewLink button {
   width: 100%;
@@ -434,13 +466,11 @@ div span {
   align-items: center;
   font-size: 15px;
   transition: 0.35s ease-in-out;
-  margin-right: 5px;
   color: rgb(226, 226, 226);
   cursor: pointer;
 }
 .preview .viewLink .live {
   background-color: #8b0fff;
-  width: 100%;
 }
 .preview .viewLink .view:hover {
   background-color: rgb(15, 0, 149);
@@ -566,7 +596,8 @@ form button {
   background-color: #171721;
 }
 form button:hover {
-  background-color: #5767de;
+  background-color: #6a2fff;
+  cursor: pointer;
 }
 
 /*Footer*/
@@ -575,15 +606,18 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #220b33;
+  background-color: rgb(82, 25, 168);
   width: 100%;
   text-align: center;
-  color: #abb1bf;
+  color: #000000;
   padding: 20px;
 }
 footer div {
   width: 100%;
   margin: 10px;
+}
+footer div:hover {
+  color: #fff;
 }
 .link i {
   font-size: 25px;
@@ -591,11 +625,11 @@ footer div {
   cursor: pointer;
 }
 .link a i {
-  color: #fff;
+  color: rgb(0, 0, 0);
   transition: 0.35s ease-in-out;
 }
 .link a i:hover {
-  scale: 1.25;
+  color: #fff;
 }
 
 /*Media Query*/
@@ -660,6 +694,9 @@ footer div {
     visibility: visible;
     color: white;
     font-size: 23px;
+  }
+  #menuicon i:hover {
+    cursor: pointer;
   }
 
   /*Pages*/
