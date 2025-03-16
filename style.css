@@ -790,6 +790,16 @@ footer div:hover {
     justify-content: center;
     align-items: center;
   }
+  .first {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  .second {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
 
   /*Contact*/
   .contact img {
