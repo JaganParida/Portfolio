@@ -16,6 +16,10 @@ let navlist = document.querySelector(".navlist");
 
 menuicon.addEventListener("click", () => {
   navlist.classList.toggle("hide");
+  menuicon.innerHTML =
+    menuicon.innerHTML === '<i class="fa-solid fa-xmark"></i>'
+      ? '  <i class="fa-solid fa-bars"></i>'
+      : '<i class="fa-solid fa-xmark"></i>';
 });
 
 /*Preview*/
