@@ -673,8 +673,9 @@ footer div:hover {
     z-index: 1;
     position: absolute;
     top: 44px;
-    width: 98%;
-    background-color: rgba(23, 23, 33, 0.6);
+    right: 0;
+    width: 50%;
+    background-color: rgba(23, 23, 33);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -695,6 +696,7 @@ footer div:hover {
     transition: 0.2s ease-in-out;
   }
   .navlist nav a:hover {
+    background-color: #2b2929;
     padding-left: 8px;
     color: #fff;
   }
@@ -739,8 +741,8 @@ footer div:hover {
     height: 250px;
     width: 250px;
     border-radius: 50%;
-    margin-bottom: 100px;
-    margin-top: 120px;
+    margin-bottom: 80px;
+    margin-top: 125px;
   }
   #home {
     display: flex;
