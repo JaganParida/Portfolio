@@ -81,6 +81,7 @@ nav #profile :hover {
   animation-range: entry 0% cover 40%;
   margin-bottom: 25px;
   display: none;
+  width: 100%;
 }
 
 .header {
@@ -255,7 +256,7 @@ div span {
   color: #fff;
   background-color: #171721;
   position: relative;
-  border: 0.1px solid rgb(128, 0, 255);
+  border-left: 8px solid rgb(128, 0, 255);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   animation: appear 5s linear;
   animation-timeline: view();
@@ -316,6 +317,7 @@ div span {
   padding: 30px;
   color: #fff;
   background-color: #171721;
+  border-top: 8px solid rgb(128, 0, 255);
   font-size: 30px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
