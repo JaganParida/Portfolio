@@ -223,7 +223,8 @@ div span {
 .resume a {
   text-decoration: none;
 }
-.resume a button:hover {
+.resume button:hover {
+  cursor: pointer;
   color: rgb(255, 255, 255);
 }
 
@@ -250,18 +251,21 @@ div span {
   align-items: center;
   flex-wrap: wrap;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 12px;
   margin: 30px;
   padding: 20px;
   color: #fff;
   background-color: #171721;
   position: relative;
-  border-left: 8px solid rgb(128, 0, 255);
-  box-shadow: rgb(0, 0, 0) 0px 4px 24px;
+  /* border-left: 8px solid rgb(128, 0, 255); */
+  /* box-shadow: rgb(0, 0, 0) 0px 4px 24px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px; */
+  box-shadow: inset #5600ff -2px -1px 52px;
   animation: appear 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
+
 .first {
   animation: side1 5s linear;
   animation-timeline: view();
@@ -312,7 +316,7 @@ div span {
   align-items: center;
   flex-wrap: wrap;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 15px;
   margin: 30px;
   padding: 30px;
   color: #fff;
@@ -694,7 +698,7 @@ footer div:hover {
     top: 44px;
     right: 0;
     width: 50%;
-    background-color: rgb(55, 55, 158);
+    background: linear-gradient(to bottom, #3949ab, #101535);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: rgba(0, 0, 0) 0px 6px 12px -6px;
@@ -838,6 +842,9 @@ footer div:hover {
   #resume {
     display: flex;
     justify-content: center;
+  }
+  .resume button:hover {
+    cursor: pointer;
   }
 
   /*Skills*/
