@@ -257,10 +257,8 @@ div span {
   color: #fff;
   background-color: #171721;
   position: relative;
-  /* border-left: 8px solid rgb(128, 0, 255); */
-  /* box-shadow: rgb(0, 0, 0) 0px 4px 24px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px; */
-  box-shadow: inset #5600ff -2px -1px 52px;
+  border-left: 8px solid rgb(128, 0, 255);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
   animation: appear 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
