@@ -45,3 +45,9 @@ previewBox.forEach((close) => {
     previewContainer.style.display = "none";
   };
 });
+
+/*Preloader*/
+let preloader = document.querySelector("#Preloader");
+window.addEventListener("load", () => {
+  preloader.style.display = "none";
+});
