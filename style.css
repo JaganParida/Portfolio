@@ -718,9 +718,8 @@ footer div:hover {
   .navlist nav {
     flex-direction: column;
     gap: 10px;
-    padding-top: 20px;
+    padding: 20px 0px 12px 0px;
     align-items: flex-start;
-    padding-left: 10px;
     width: 100%;
     transition: 0.2s ease-in-out;
   }
@@ -730,10 +729,10 @@ footer div:hover {
     line-height: 35px;
     font-size: 16px;
     transition: 0.2s ease-in-out;
+    padding-left: 15px;
   }
   .navlist nav a:hover {
     background-color: #2b2929;
-    padding-left: 8px;
     color: #fff;
   }
   .navlist nav #profile {
@@ -778,7 +777,7 @@ footer div:hover {
     width: 250px;
     border-radius: 50%;
     margin-bottom: 80px;
-    margin-top: 125px;
+    margin-top: 235px;
   }
   #home {
     display: flex;
@@ -826,6 +825,7 @@ footer div:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 55px;
   }
   .container {
     display: flex;
