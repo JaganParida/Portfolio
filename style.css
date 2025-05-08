@@ -89,7 +89,7 @@ nav #profile :hover {
   font-size: 45px;
   color: #5767de;
   text-align: center;
-  padding-top: 135px;
+  padding-top: 100px;
   animation: appear 5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
@@ -777,7 +777,7 @@ footer div:hover {
     width: 250px;
     border-radius: 50%;
     margin-bottom: 80px;
-    margin-top: 235px;
+    margin-top: 80px;
   }
   #home {
     display: flex;
