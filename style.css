@@ -186,9 +186,7 @@ span {
 span .typed-cursor {
   margin-left: 0px;
 }
-.auto-type {
-  margin: 20px 5px 20px 20px;
-}
+
 .typed-cursor {
   margin: 0;
 }
@@ -197,10 +195,10 @@ div .check {
   font-weight: 600;
   margin: 20px;
 }
-div .auto-type {
+.auto-type {
   font-size: 35px;
   font-weight: 600;
-  margin: 20px;
+  margin: 20px 3px 20px 20px;
 }
 #link {
   display: flex;
@@ -378,7 +376,7 @@ div .auto-type {
   height: 100%;
   width: 97%;
   border-radius: 6px;
-  background: #530191;
+  background: #854ce6;
   animation: progress 0.4s ease-in-out forwards;
   opacity: 0;
 }
@@ -425,7 +423,7 @@ div .auto-type {
   color: #fff;
   padding: 2px 6px;
   border-radius: 3px;
-  background: #530191;
+  background: #854ce6;
   z-index: 1;
 }
 .tooltip::before {
@@ -436,7 +434,7 @@ div .auto-type {
   height: 10px;
   width: 10px;
   z-index: -1;
-  background-color: #530191;
+  background-color: #854ce6;
   transform: translateX(-50%) rotate(45deg);
 }
 
@@ -1008,7 +1006,7 @@ footer div:hover {
     justify-content: center;
     align-items: center;
   }
-  div span {
+  div .auto-type {
     font-size: 23px;
   }
   .note {
