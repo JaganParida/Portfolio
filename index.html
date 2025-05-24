@@ -23,18 +23,23 @@
         <div id="Portfolio"><a href="#about_head">Jagan's Portfolio</a></div>
         <div class="navlist hide">
             <nav class="hide">
-                <a class="about_hide" href="#about_head">About</a>
-                <a class="note_head_hide" href="#note_head">About</a>
-                <a href="#skills_head">Skills</a>
-                <a href="#education_head">Education</a>
-                <a href="#projects_head">Projects</a>
-                <a href="#contacts_headerline">Contacts</a>
-                <a id="profile" href="https://github.com/JaganParida" target="#">Github Profile</a>
+                <a class="about_hide navItem" href="#about_head">About</a>
+                <a class="note_head_hide navItem" href="#note_head">About</a>
+                <a href="#skills_head" class="navItem">Skills</a>
+                <a href="#education_head" class="navItem">Education</a>
+                <a href="#projects_head" class="navItem">Projects</a>
+                <a href="#contacts_headerline" class="navItem">Contacts</a>
+                <a id="profile" href="https://github.com/JaganParida" target="_blank">Github Profile</a>
             </nav>
+
         </div>
         <div>
         </div>
-        <div id="menuicon"><i class="fa-solid fa-bars"></i>
+        <div class="menuicon" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
         </div>
     </header>
 
@@ -61,19 +66,17 @@
                             my DSA knowledge to optimize performance and efficiency.
                         </p>
                     </div>
-
                     <div id="link">
                         <div class="resume">
-                            <span class="check"><a href="Assets/JaganParida_Resume.pdf" target="_blank"><button>Check
+                            <span class="check hire1"><a href="Assets/JaganParida_Resume.pdf"
+                                    target="_blank"><button>Check
                                         Resume</button></a></span>
-                            <span class="check"><a href="#contacts_headerline"><button>Hire Me</button></a></span>
+                            <span class="check hire2"><a href="#contacts_headerline"><button>Hire Me</button></a></span>
                         </div>
                     </div>
                 </div>
-
                 <img src="Assets/jaganp.jpg" alt="">
             </div>
-
         </div>
 
         <h1 class="header" id="skills_head">Skills</h1>
@@ -225,307 +228,198 @@
 
                     </div>
                 </div>
-
-
-
             </div>
         </div>
 
         <h1 class="header" id="education_head">Education</h1>
         <div class="page" id="page3">
-            <div id="skill-list">
-                <div class="edu first">
-                    <img src="Assets/centurion.png" alt="">
-                    <div>Btech CSE
-                        <div>
-                            <h6>from 2023-27</h6>
-                            <h6>I'm continuing my BTECH in Centurion University Bhubaneswar in CSE</h6>
-                            <h6>Grade: 8.7 cgpa(1st year) </h6>
+            <section class="timeline-section">
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date"><i class="fas fa-graduation-cap"></i>
+                            2023 - 2027</div>
+                        <div class="timeline-content">
+                            <h3>Centurion University of Technology and Management, Bhubaneswar</h3>
+                            <p>I'm continuing my BTECH in Centurion University Bhubaneswar in CSE Grade: 8.7 cgpa(1st
+                                year) </p>
                         </div>
                     </div>
-                </div>
-                <div class="edu second">
-                    <img src="Assets/nist.png" alt="">
-                    <div>12th Science
-                        <div>
-                            <h6>from 2021-23</h6>
-                            <h6>I have completed my 12th from NIST Higher Secondary School in PCM</h6>
-                            <h6>Grade: 86.33%</h6>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date"><i class="fas fa-graduation-cap"></i>
+                            2021 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Nist Higher Seconday School</h3>
+                            <p>I have completed my 12th from NIST Higher Secondary School in PCM Grade: 86.33%</p>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date"><i class="fas fa-graduation-cap"></i>
+                            2019 - 2021</div>
+                        <div class="timeline-content">
+                            <h3>P.C High School</h3>
+                            <p>I have completed my secondary education from PC High School in HSE medium Graade: 85.5%
+                            </p>
+                        </div>
+                    </div>
+            </section>
         </div>
 
         <h1 class="header" id="projects_head">Projects</h1>
         <div class="page" id="page4">
             <div id="project-list">
-                <div class="projects" data-name="p-1">
-                    <img src="Assets/wanderlodge-ui.png" alt="">
+                <div class="projects wonderLodge ">
+                    <div class="img"><img src="Assets/wanderlodge-ui.png" alt=""></div>
                     <div class="uses">
                         <span>EJS</span><span>JS</span><span>CSS</span><span>Bootstrap</span><span>MongoDB</span><span>Express</span><span>Node.js</span>
                     </div>
                     <h3>WanderLodge Website</h3>
                     <div class="time">Dec24-Jan25</div>
-                    <p>WanderLodge, full-stack web application inspired by Airbnb. This platform allows users
-                        to explore, create, review, and...</p>
+                    <p>WanderLodge is an Airbnb-inspired full-stack web application for exploring, creating, reviewing,
+                        and managing lodging
+                        listings.it features Cloudinary for image storage and interactive Mapbox
+                        maps.</p>
+                    <div class="viewLink">
+                        <a href="https://github.com/JaganParida/FullStack-Project" target="_blank"><button
+                                class="view"><i class="fa-brands fa-github"></i></button>
+                        </a>
+                        <a href="https://wanderlust-project-mcgi.onrender.com" target="_blank"> <button
+                                class="live">view
+                                live
+                            </button></a>
+                    </div>
                 </div>
-                <div class="projects" data-name="p-2">
-                    <img src="Assets/spotify-ui.png" alt="">
+                <div class="projects">
+                    <div class="img"><img src="Assets/spotify-ui.png" alt=""></div>
                     <div class="uses">
                         <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JS</span>
                     </div>
                     <h3>Spotify UI Clone</h3>
                     <div class="time">Oct24-Nov24</div>
-                    <p>The Spotify Clone is a web-based music streaming application built using HTML, CSS, and
-                        JavaScript.
-                        It allows users to
-                        search and play their favorite songs, as...</p>
+                    <p>The Spotify Clone is a web-based music streaming application developed using HTML, CSS, and
+                        JavaScript. It allows users
+                        to search, play individual songs, or play all listed tracks, offering a seamless and engaging
+                        Spotify-like user
+                        experience.</p>
+                    <div class="viewLink">
+                        <a href="https://github.com/JaganParida/Spotify_clone" target="_blank"><button class="view"><i
+                                    class="fa-brands fa-github"></i>
+                            </button></a>
+                        <a href="https://jaganparida.github.io/Spotify_clone/" target="_blank"><button class="live">view
+                                live</button></a>
+                    </div>
                 </div>
-                <div class="projects" data-name="p-3">
-                    <img src="Assets/amazon-ui.png" alt="">
+                <div class="projects">
+                    <div class="img"><img src="Assets/amazon-ui.png" alt=""></div>
                     <div class="uses">
                         <span>HTML</span><span>CSS</span>
                     </div>
                     <h3>Amazon UI Clone</h3>
                     <div class="time">Jul24-Aug24</div>
-                    <p>An Amazon UI clone project designed using only HTML and CSS. It replicates the homepage layout,
-                        showcasing responsive
-                        design, styling techniques...</p>
+                    <p>A simple and responsive Amazon homepage clone built using HTML & CSS. This project replicates the
+                        user interface of
+                        Amazon, focusing on the layout, design, and responsiveness to provide a seamless shopping
+                        experience.</p>
+                    <div class="viewLink">
+                        <a href="https://github.com/JaganParida/Amazon_UI_Clone" target="_blank"><button class="view"><i
+                                    class="fa-brands fa-github"></i></button></a>
+                        <a href="https://jaganparida.github.io/Amazon_UI_Clone/" target="_blank"><button
+                                class="live">view
+                                live</button></a>
+                    </div>
                 </div>
-                <div class="projects" data-name="p-4">
-                    <img src="Assets/simon.png" alt="">
+                <div class="projects">
+                    <div class="img"><img src="Assets/simon.png" alt=""></div>
                     <div class="uses">
                         <span>HTML</span><span>CSS</span><span>JS</span>
                     </div>
                     <h3>Simon Says Game</h3>
                     <div class="time">Oct24-Nov24</div>
-                    <p>Simon Says is a classic memory-based game where players must follow commands prefixed with "Simon
-                        says." If an
-                        instruction lacks "Simon says"...</p>
+                    <p>Simon Says is a classic memory and reflex game where players follow commands only if prefixed
+                        with "Simon says."
+                        Ignoring or wrongly acting on instructions results in elimination. The game's difficulty
+                        increases progressively,
+                        challenging players' focus, speed, and accuracy.</p>
+                    <div class="viewLink"><a href="https://github.com/JaganParida/Simon_says_Game"
+                            target="_blank"><button class="view"><i class="fa-brands fa-github"></i></button></a> <a
+                            href="https://jaganparida.github.io/Simon_says_Game/" target="_blank"><button
+                                class="live">view
+                                live</button></a>
+                    </div>
                 </div>
-                <div class="projects" data-name="p-5">
-                    <img src="Assets/calculator.png" alt="">
+                <div class="projects">
+                    <div class="img"><img src="Assets/calculator.png" alt=""></div>
                     <div class="uses">
                         <span>HTML</span><span>CSS</span><span>JS</span>
                     </div>
                     <h3>Calculator&nbsp;</h3>
                     <div class="time">Oct24-Nov24</div>
-                    <p>The Calculator is a simple and user-friendly web application built using HTML, CSS, and
-                        JavaScript.
-                        It allows users to
-                        perform basic arithmetic operations...</p>
+                    <p>The Calculator is a simple, user-friendly web app built with HTML, CSS, and JavaScript. It
+                        performs basic arithmetic
+                        operations through a clean, responsive interface and now supports keyboard input for improved
+                        usability and convenience.</p>
+                    <div class="viewLink"><a href="https://github.com/JaganParida/Calculator" target="_blank"><button
+                                class="view"><i class="fa-brands fa-github"></i></button></a><a
+                            href="https://jaganparida.github.io/Calculator/" target="_blank"><button class="live">view
+                                live</button></a>
+                    </div>
                 </div>
-                <div class="projects" data-name="p-6">
-                    <img src="Assets/todo.png" alt="">
+                <div class="projects">
+                    <div class="img"><img src="Assets/todo.png" alt=""></div>
                     <div class="uses">
                         <span>HTML</span><span>CSS</span><span>React.js</span>
                     </div>
                     <h3>To-Do App</h3>
                     <div class="time">Dec24-Jan25</div>
-                    <p>TodoApp is a task management application built with React.js, HTML, and CSS. It lets users add,
-                        delete, and complete
-                        tasks efficiently. With a...
+                    <p>TodoApp is a task management app built with React.js, HTML, and CSS. It enables users to add,
+                        delete, and mark tasks as
+                        completed, offering a clean, intuitive, and responsive interface for efficient daily task
+                        organization and productivity.
                     </p>
+                    <div class="viewLink"><a href="https://github.com/JaganParida/Todo-webApp" target="_blank"><button
+                                class="view"><i class="fa-brands fa-github"></i></button></a><a
+                            href="https://jaganparida.github.io/Todo-webApp/" target="_blank"><button class="live">view
+                                live</button></a>
+                    </div>
                 </div>
-                <div class="projects" data-name="p-7">
-                    <img src="Assets/weatherApp.png" alt="">
+                <div class="projects">
+                    <div class="img"><img src="Assets/weatherApp.png" alt=""></div>
                     <div class="uses">
                         <span>HTML</span><span>CSS</span><span>JS</span><span>React.js</span>
                     </div>
                     <h3>Weather website</h3>
                     <div class="time">Dec24-Jan25</div>
-                    <p>This is a simple Weather App built using React.js, HTML, CSS, and JavaScript. It fetches
-                        real-time
-                        weather data using an
-                        API and displays temperature, humidity...</p>
+                    <p>This Weather App, built with React.js, HTML, CSS, and JavaScript, fetches real-time data via API.
+                        It shows temperature,
+                        humidity, wind speed, and forecasts, allowing users to search any city for instant, accurate,
+                        and user-friendly weather
+                        updates.</p>
+                    <div class="viewLink"><a href="https://github.com/JaganParida/Weather_App" target="_blank"><button
+                                class="view"><i class="fa-brands fa-github"></i></button></a>
+                        <a href="https://jaganparida.github.io/Weather_App/" target="_blank"><button class="live">view
+                                live</button></a>
+                    </div>
                 </div>
-                <div class="projects" data-name="p-8">
-                    <img src="Assets/tictactoe.png" alt="">
+                <div class="projects">
+                    <div class="img"><img src="Assets/tictactoe.png" alt=""></div>
                     <div class="uses">
                         <span>HTML</span><span>CSS</span><span>JS</span>
                     </div>
                     <h3>Tic Tac Toe Game</h3>
                     <div class="time">Nov24-Dec24</div>
-                    <p>This is a simple Tic-Tac-Toe game built using HTML, CSS, and JavaScript. The game allows two
-                        players
-                        to take turns
-                        marking X and O on a 3x3 grid...</p>
-                </div>
-            </div>
-        </div>
-        <div class="projects-preview">
-            <div class="preview" data-target="p-1">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/Wanderlust.png" alt="">
-                <div class="uses">
-                    <span>EJS</span><span>JS</span><span>CSS</span><span>Bootstrap</span><span>MongoDB</span><span>Express</span><span>Node.js</span>
-                </div>
-                <h3>WanderLodge Website</h3>
-                <div class="time">Dec24-Jan25</div>
-                <p>WanderLodge, a full-stack web application inspired by Airbnb. This platform allows users
-                    to explore, create,
-                    review, and manage lodging listings. Built using HTML, CSS, JavaScript, MongoDB, Node.js,
-                    Express.js, EJS, and
-                    Bootstrap, it provides a seamless experience for travelers and hosts alike. Additionally, Cloudinary
-                    is used for image
-                    storage, and Mapbox is integrated to display locations on an interactive map.For view
-                    click on below button</p>
-                <div class="viewLink">
-                    <a href="https://github.com/JaganParida/FullStack-Project"><button class="view">view
-                            code</button>
-                    </a>
-                    <a href="https://wanderlust-project-mcgi.onrender.com"> <button class="live">view
-                            live
-                        </button></a>
-                </div>
-            </div>
-            <div class="preview" data-target="p-2">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/spotify.png" alt="">
-                <div class="uses">
-                    <span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JS</span>
-                </div>
-                <h3>Spotify UI Clone</h3>
-                <div class="time">Oct24-Nov24</div>
-                <p>The Spotify Clone is a web-based music streaming application built using HTML, CSS, and JavaScript.
-                    It allows users to
-                    search and play their favorite songs, as well as play all songs listed on the homepage. The project
-                    replicates essential
-                    functionalities of Spotify, providing a smooth and engaging user experience.For
-                    view
-                    click on live button.</p>
-                <div class="viewLink">
-                    <a href="https://github.com/JaganParida/Spotify_clone"><button class="view">view code
-                        </button></a>
-                    <a href="https://jaganparida.github.io/Spotify_clone/"><button class="live">view
-                            live</button></a>
-                </div>
-            </div>
-            <div class="preview" data-target="p-3">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/amazon.png" alt="">
-                <div class="uses">
-                    <span>HTML</span><span>CSS</span>
-                </div>
-                <h3>Amazon UI Clone</h3>
-                <div class="time">Jul24-Aug24</div>
-                <p>An Amazon UI clone project designed using only HTML and CSS. It replicates the homepage layout,
-                    showcasing responsive
-                    design, styling techniques, and user-friendly interface aesthetics for practice.For
-                    view
-                    click on live button</p>
-                <div class="viewLink">
-                    <a href="https://github.com/JaganParida/Amazon_UI_Clone"><button class="view">view
-                            code</button></a>
-                    <a href="https://jaganparida.github.io/Amazon_UI_Clone/"><button class="live">view
-                            live</button></a>
-
-                </div>
-            </div>
-            <div class="preview" data-target="p-4">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/simon.png" alt="">
-                <div class="uses">
-                    <span>HTML</span><span>CSS</span><span>JS</span>
-                </div>
-                <h3>Simon Says Game</h3>
-                <div class="time">Oct24-Nov24</div>
-                <p>Simon Says is a classic memory-based game where players must follow commands prefixed with "Simon
-                    says." If an
-                    instruction lacks "Simon says" players should ignore it. Making a mistake results in elimination.
-                    The game tests memory
-                    and reflexes by progressively increasing difficulty as the player advances.For
-                    view
-                    click on live button.</p>
-                <div class="viewLink"><a href="https://github.com/JaganParida/Simon_says_Game"><button class="view">view
-                            code</button></a> <a href="https://jaganparida.github.io/Simon_says_Game/"><button
-                            class="live">view
-                            live</button></a>
-                </div>
-            </div>
-            <div class="preview" data-target="p-5">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/calculator.png" alt="">
-                <div class="uses">
-                    <span>HTML</span><span>CSS</span><span>JS</span>
-                </div>
-                <h3>Calculator&nbsp;</h3>
-                <div class="time">Oct24-Nov24</div>
-                <p>The Calculator is a simple and user-friendly web application built using HTML, CSS, and JavaScript.
-                    It allows users to
-                    perform basic arithmetic operations with a clean and responsive interface. The calculator now also
-                    supports keyboard
-                    input for enhanced usability.For
-                    better
-                    view
-                    click on live button.</p>
-                <div class="viewLink"><a href="https://github.com/JaganParida/Calculator"><button class="view">view
-                            code</button></a><a href="https://jaganparida.github.io/Calculator/"><button
-                            class="live">view
-                            live</button></a>
-                </div>
-            </div>
-            <div class="preview" data-target="p-6">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/todo.png" alt="">
-                <div class="uses">
-                    <span>HTML</span><span>CSS</span><span>React.js</span>
-                </div>
-                <h3>To-Do App</h3>
-                <div class="time">Dec24-Jan25</div>
-                <p>TodoApp is a task management application built with React.js, HTML, and CSS. It lets users add,
-                    delete, and complete
-                    tasks efficiently. With a responsive design and intuitive interface, it enhances productivity by
-                    helping users stay
-                    organized in personal and work-related tasks.For better view
-                    click on live button </p>
-                <div class="viewLink"><a href="https://github.com/JaganParida/Todo-webApp"><button class="view">view
-                            code</button></a><a href="https://jaganparida.github.io/Todo-webApp/"><button
-                            class="live">view
-                            live</button></a>
-                </div>
-            </div>
-            <div class="preview" data-target="p-7">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/weatherApp.png" alt="">
-                <div class="uses">
-                    <span>HTML</span><span>CSS</span><span>JS</span><span>React.js</span>
-                </div>
-                <h3>Weather website</h3>
-                <div class="time">Dec24-Jan25</div>
-                <p>This is a simple Weather App built using React.js, HTML, CSS, and JavaScript. It fetches real-time
-                    weather data using an
-                    API and displays temperature, humidity, wind speed, and forecasts in a user-friendly interface. The
-                    app allows users to
-                    search for any city and get up-to-date weather information instantly.For
-                    view
-                    click on below button</p>
-                <div class="viewLink"><a href="https://github.com/JaganParida/Weather_App"><button class="view">view
-                            code</button></a>
-                    <a href="https://jaganparida.github.io/Weather_App/"><button class="live">view
-                            live</button></a>
-                </div>
-            </div>
-            <div class="preview" data-target="p-8">
-                <i class="fa-solid fa-xmark"></i>
-                <img src="Assets/tictactoe.png" alt="">
-                <div class="uses">
-                    <span>HTML</span><span>CSS</span><span>JS</span>
-                </div>
-                <h3>Tic Tac Toe Game</h3>
-                <div class="time">Oct24-Nov24</div>
-                <p>This is a simple Tic-Tac-Toe game built using HTML, CSS, and JavaScript. The game allows two players
-                    to take turns
-                    marking X and O on a 3x3 grid. The player who first aligns three of their marks horizontally,
-                    vertically, or diagonally
-                    wins the game. If all squares are filled without a winner, the game ends in a draw.For
-                    view
-                    click on below button</p>
-                <div class="viewLink"><a href="https://github.com/JaganParida/TicTacToe_Game"><button class="view">view
-                            code</button></a>
-                    <a href="https://jaganparida.github.io/TicTacToe_Game/"><button class="live">view
-                            live</button></a>
+                    <p>This Tic-Tac-Toe game, developed using HTML, CSS, and JavaScript, allows two players to alternate
+                        placing X and O on a
+                        3x3 grid. The player who first aligns three marks horizontally, vertically, or diagonally wins,
+                        otherwise the game ends
+                        in a draw.</p>
+                    <div class="viewLink"><a href="https://github.com/JaganParida/TicTacToe_Game"
+                            target="_blank"><button class="view"><i class="fa-brands fa-github"></i></button></a>
+                        <a href="https://jaganparida.github.io/TicTacToe_Game/" target="_blank"><button
+                                class="live">view
+                                live</button></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -541,12 +435,12 @@
                         <input type="text" name="subject" required placeholder="Subjcet" />
                         <textarea class="message" name="message" required
                             placeholder="Message me for any suggetion"></textarea>
-                        <button>Send</button>
+                        <div class="Contactbtn"><button><i class="fa-solid fa-paper-plane"></i>Send
+                                Message</button>
+                        </div>
                     </form>
                 </div>
-
             </div>
-
         </div>
     </section>
 

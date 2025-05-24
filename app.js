@@ -11,43 +11,118 @@ var typed = new Typed(".auto-type", {
   loop: true,
 });
 
-let menuicon = document.querySelector("#menuicon");
+/*menuicon */
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+let menuicon = document.querySelector(".menuicon");
 let navlist = document.querySelector(".navlist");
 
 menuicon.addEventListener("click", () => {
   navlist.classList.toggle("hide");
-  menuicon.innerHTML =
-    menuicon.innerHTML === '<i class="fa-solid fa-xmark"></i>'
-      ? '  <i class="fa-solid fa-bars"></i>'
-      : '<i class="fa-solid fa-xmark"></i>';
 });
 
-/*Preview*/
-let previewContainer = document.querySelector(".projects-preview");
-let previewBox = previewContainer.querySelectorAll(".preview");
+const navItems = document.querySelectorAll(".navItem");
 
-document.querySelectorAll("#project-list .projects").forEach((projects) => {
-  projects.onclick = () => {
-    previewContainer.style.display = "flex";
-    let name = projects.getAttribute("data-name");
-    previewBox.forEach((preview) => {
-      let target = preview.getAttribute("data-target");
-      if (name == target) {
-        preview.classList.add("active");
-      }
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+function applyNavHighlighting(media) {
+  if (media.matches) {
+    navItems.forEach((el) => {
+      el.addEventListener("click", () => {
+        navItems.forEach((item) => (item.style.backgroundColor = ""));
+        el.style.backgroundColor = "#644cff";
+      });
     });
-  };
-});
-
-previewBox.forEach((close) => {
-  close.querySelector(".fa-xmark").onclick = () => {
-    close.classList.remove("active");
-    previewContainer.style.display = "none";
-  };
-});
+  } else {
+    navItems.forEach((item) => (item.style.backgroundColor = ""));
+  }
+}
+applyNavHighlighting(mediaQuery);
+mediaQuery.addEventListener("change", applyNavHighlighting);
 
 /*Preloader*/
 let preloader = document.querySelector("#Preloader");
 window.addEventListener("load", () => {
   preloader.style.display = "none";
+});
+
+// timeline
+
+document.addEventListener("DOMContentLoaded", () => {
+  const timelineContainer = document.querySelector(".timeline-items");
+  const line = document.createElement("div");
+  line.classList.add("timeline-scroll-line");
+  timelineContainer.appendChild(line);
+
+  function updateLinePosition() {
+    if (window.innerWidth <= 767) {
+      line.style.left = "7px";
+    } else {
+      line.style.left = "calc(50% - 1px)";
+    }
+  }
+
+  updateLinePosition();
+  window.addEventListener("resize", updateLinePosition);
+
+  function animateLine() {
+    const containerTop =
+      timelineContainer.getBoundingClientRect().top + window.scrollY;
+    const containerHeight = timelineContainer.offsetHeight;
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    const scrollCenter = scrollY + windowHeight / 2;
+    const distanceIntoTimeline = scrollCenter - containerTop;
+
+    let percentage = (distanceIntoTimeline / containerHeight) * 100;
+    percentage = Math.max(0, Math.min(percentage, 100));
+
+    line.style.height = `${percentage}%`;
+
+    requestAnimationFrame(animateLine);
+  }
+
+  animateLine();
+});
+
+/*skill-animation */
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  document.querySelectorAll(".skills, .first, .second").forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+//projects-animation
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  document.querySelectorAll(".projects").forEach((project) => {
+    observer.observe(project);
+  });
 });
