@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   timelineContainer.appendChild(line);
 
   function updateLinePosition() {
-    if (window.innerWidth <= 767) {
+    if (window.innerWidth <= 765) {
       line.style.left = "7px";
     } else {
       line.style.left = "calc(50% - 1px)";
@@ -65,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateLinePosition();
   window.addEventListener("resize", updateLinePosition);
+
+  let lastScrollY = window.scrollY;
 
   function animateLine() {
     const containerTop =
@@ -79,22 +81,25 @@ document.addEventListener("DOMContentLoaded", () => {
     let percentage = (distanceIntoTimeline / containerHeight) * 100;
     percentage = Math.max(0, Math.min(percentage, 100));
 
+    // Smooth height transition
+    line.style.transition = "height 0.2s ease-out";
     line.style.height = `${percentage}%`;
 
+    lastScrollY = scrollY;
     requestAnimationFrame(animateLine);
   }
 
   animateLine();
 });
 
-/*skill-animation */
+/* skill-animation (unchanged except smoother trigger) */
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); // one-time
         }
       });
     },
@@ -126,3 +131,28 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(project);
   });
 });
+
+/*go-to-top-button */
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 150 ||
+    document.documentElement.scrollTop > 150
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
