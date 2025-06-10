@@ -178,6 +178,15 @@ nav #profile {
 nav #profile :hover {
   color: white;
 }
+
+header {
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  transition: top 0.4s ease-in-out;
+  z-index: 999; /* keep header above other elements */
+}
+
 .quote #note_head {
   font-size: 45px;
   color: #5767de;
@@ -442,13 +451,17 @@ div .check {
   position: relative;
   width: 100%;
   background: #1e1e1f;
-  margin: 0 15px;
+  margin: 0 200px;
   padding: 10px 20px;
   border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 12px 4px;
 }
 .proficiency .skill-box {
   width: 100%;
   margin: 25px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .skill-box .title {
   display: block;
@@ -457,7 +470,7 @@ div .check {
   color: #f5f5f5;
 }
 .skill-box .skill-bar {
-  height: 8px;
+  height: 10px;
   width: 100%;
   border-radius: 6px;
   margin-top: 6px;
@@ -469,7 +482,7 @@ div .check {
   height: 100%;
   width: 97%;
   border-radius: 6px;
-  background: #854ce6;
+  background-image: linear-gradient(to right, #4a00e0, #8e2de2);
   animation: progress 2s ease-in-out forwards;
   opacity: 0;
 }
@@ -1012,7 +1025,7 @@ footer div {
   .navlist nav {
     flex-direction: column;
     gap: 10px;
-    padding: 20px 0px 12px 0px;
+    padding: 20px 0px 0px 0px;
     align-items: flex-start;
     width: 100%;
     transition: 0.2s ease-in-out;
@@ -1036,12 +1049,19 @@ footer div {
     display: none;
   }
   nav #profile {
-    width: 130px;
-    background-color: rgb(128, 0, 255);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #644cff;
     border: none;
     box-shadow: none;
-    padding: 3px 3px 3px 14px;
+    padding: 3px;
     color: white;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   #menuicon i {
     visibility: visible;
@@ -1205,6 +1225,10 @@ footer div {
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+  }
+
+  .proficiency {
+    margin: 0 25px;
   }
 
   /*projects*/
