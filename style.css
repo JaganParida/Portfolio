@@ -995,6 +995,15 @@ footer div {
     border-radius: 50%;
     margin-bottom: 80px;
     margin-top: 80px;
+    animation: gotoTop 2s ease-in-out alternate infinite;
+  }
+  @keyframes gotoTop {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(20px);
+    }
   }
   #home {
     display: flex;
