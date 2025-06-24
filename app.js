@@ -165,3 +165,61 @@ function scrollFunctionTop() {
     header.style.top = "-100px";
   }
 }
+
+//slider
+let slideIndex = 0;
+let timer;
+
+function showSlides(indexChange = 0) {
+  clearTimeout(timer);
+
+  const slides = document.querySelectorAll(".mySlides");
+  const dotsContainer = document.getElementById("dots-container");
+
+  // Create dots only once
+  if (dotsContainer.children.length === 0) {
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      dot.addEventListener("click", () => moveToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  slideIndex += indexChange;
+  if (slideIndex >= slides.length) slideIndex = 0;
+  if (slideIndex < 0) slideIndex = slides.length - 1;
+
+  // Hide all slides and reset dot states
+  slides.forEach((slide, i) => {
+    slide.classList.remove("slide-in");
+    slide.style.display = "none";
+    dotsContainer.children[i].classList.remove("active");
+    dotsContainer.children[i].innerHTML = "";
+  });
+
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex].classList.add("slide-in");
+
+  // Add active dot and animate fill
+  const activeDot = dotsContainer.children[slideIndex];
+  activeDot.classList.add("active");
+  const fillDiv = document.createElement("div");
+  fillDiv.classList.add("fill");
+  activeDot.appendChild(fillDiv);
+
+  timer = setTimeout(() => showSlides(1), 2000);
+}
+
+function plusSlides(n) {
+  showSlides(n);
+}
+
+function moveToSlide(n) {
+  slideIndex = n - 1;
+  showSlides(1);
+}
+
+window.onload = () => {
+  showSlides();
+};
