@@ -117,44 +117,47 @@ document.addEventListener("DOMContentLoaded", () => {
   animateLine();
 });
 
-/* skill-animation (unchanged except smoother trigger) */
+//animation on scroll-view
 document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // one-time
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
+  // Utility to create observer with a threshold
+  const handleIntersect = (threshold) => {
+    return new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // Trigger once
+          }
+        });
+      },
+      { threshold }
+    );
+  };
 
+  // Observer for skills section
+  const skillsObserver = handleIntersect(0.4);
   document.querySelectorAll(".skills, .first, .second").forEach((el) => {
-    observer.observe(el);
+    skillsObserver.observe(el);
   });
-});
 
-//projects-animation
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.2,
-    }
-  );
-
+  // Observer for projects section
+  const projectsObserver = handleIntersect(0.2);
   document.querySelectorAll(".projects").forEach((project) => {
-    observer.observe(project);
+    projectsObserver.observe(project);
   });
+
+  // Observer for resume button
+  const resumeObserver = handleIntersect(0.3);
+  document.querySelectorAll(".resume").forEach((btn) => {
+    resumeObserver.observe(btn);
+  });
+
+  // Observer for the single proficiency container
+  const proficiencyObserver = handleIntersect(0.3);
+  const proficiencyEl = document.querySelector(".proficiency-container");
+  if (proficiencyEl) {
+    proficiencyObserver.observe(proficiencyEl);
+  }
 });
 
 /*go-to-top-button */

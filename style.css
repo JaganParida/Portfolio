@@ -308,6 +308,7 @@ div .check {
   width: 100%;
   display: inline-flex;
 }
+
 .resume button {
   height: 50px;
   width: 150px;
@@ -324,6 +325,18 @@ div .check {
   color: #fff;
   cursor: pointer;
 }
+
+.resume {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.resume.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .resume .hire1 button {
   background-color: var(--resume-bgColor);
   color: #fff;
@@ -428,6 +441,17 @@ div .check {
   display: flex;
   justify-content: center;
 }
+.proficiency-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.proficiency-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .proficiency {
   height: 100%;
   position: relative;
