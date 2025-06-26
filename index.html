@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
 </head>
 
 <body>
@@ -30,7 +32,11 @@
                 <a href="#projects_head" class="navItem">Projects</a>
                 <a href="#Cerifications" class="navItem">Cerifications</a>
                 <a href="#contacts_headerline" class="navItem">Contacts</a>
-                <a id="profile" href="https://github.com/JaganParida" target="_blank">Github Profile</a>
+                <div class="theme">
+                    <a id="profile" href="https://github.com/JaganParida" target="_blank">Github Profile</a>
+                    <i title="Toggle to Change theme" class="bi bi-brightness-high-fill" id="toggleDark"></i>
+                </div>
+
             </nav>
 
         </div>
@@ -532,7 +538,7 @@
                     <div class="info">
                         <div class="certifyCompany">
                             <img src="Assets/linkedin-learning-seeklogo.png" alt="">
-                            <h3>Linkedin Learning</h3>
+                            <h3>Linkedin Learing</h3>
                         </div>
                         <div class="time">Issued in Apr 2025</div>
                         <p>Completed the “Introduction to Web Design and Development” course on LinkedIn Learning,
@@ -615,8 +621,18 @@
                     </div>
                 </div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1)"><svg width="6.75" height="12" fill="none"
+                    class="_aj3i _agnt _adid _arcp _afbl">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M.22922.22922c.30563-.30563.80115-.30563 1.10678 0l5.21739 5.21739c.30562.30563.30562.80115 0 1.10678L1.336 11.7708c-.30563.3056-.80115.3056-1.10678 0-.30563-.3056-.30563-.8012 0-1.1068L4.89322 6l-4.664-4.664c-.30563-.30563-.30563-.80115 0-1.10678Z"
+                        fill="currentColor"></path>
+                </svg></a>
+            <a class="next" onclick="plusSlides(1)"><svg width="6.75" height="12" fill="none"
+                    class="_aj3i _agnt _adid _arcp _afbl">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M.22922.22922c.30563-.30563.80115-.30563 1.10678 0l5.21739 5.21739c.30562.30563.30562.80115 0 1.10678L1.336 11.7708c-.30563.3056-.80115.3056-1.10678 0-.30563-.3056-.30563-.8012 0-1.1068L4.89322 6l-4.664-4.664c-.30563-.30563-.30563-.80115 0-1.10678Z"
+                        fill="currentColor"></path>
+                </svg></a>
         </div>
         <div class="slider-dots" id="dots-container"></div>
 

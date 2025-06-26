@@ -1,3 +1,28 @@
+const toggle = document.getElementById("toggleDark");
+const html = document.documentElement;
+
+// Check for saved preference in localStorage
+if (localStorage.getItem("mode") === "dark") {
+  html.classList.add("theme-dark");
+  toggle.classList.remove("bi-brightness-high-fill");
+  toggle.classList.add("bi-moon");
+}
+
+toggle.addEventListener("click", function () {
+  const isDark = html.classList.toggle("theme-dark");
+
+  if (isDark) {
+    this.classList.remove("bi-brightness-high-fill");
+    this.classList.add("bi-moon");
+    localStorage.setItem("mode", "dark");
+  } else {
+    this.classList.remove("bi-moon");
+    this.classList.add("bi-brightness-high-fill");
+    localStorage.setItem("mode", "light");
+  }
+});
+
+//type-writer
 var typed = new Typed(".auto-type", {
   strings: [
     "CSE Student",
