@@ -166,10 +166,10 @@ nav #profile {
 }
 .theme i {
   cursor: pointer;
-  background-color: var(--theme-i);
+  background-color: var(--view-i-color);
   padding: 7px;
   border-radius: 10px;
-  color: var(--view-i-color);
+  color: var(--theme-i);
   height: 40px;
   width: 40px;
   display: flex;
@@ -936,8 +936,9 @@ div .check {
 .contact {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
   justify-content: space-evenly;
-  margin-top: 80px;
+  margin-top: 30px;
   height: 100%;
 }
 #contacts_headerline {
@@ -1027,6 +1028,14 @@ form button:hover {
   background-color: var(--projects-viewLink);
   color: var(--view-i-color);
   cursor: pointer;
+}
+#contact_p {
+  color: var(--projects-p);
+  text-align: center;
+}
+.contact p {
+  color: var(--resume-bgColor);
+  margin-bottom: 10px;
 }
 
 /*Footer*/
