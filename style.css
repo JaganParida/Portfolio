@@ -493,8 +493,6 @@ div .check {
     var(--proficiency-bgColor1),
     var(--proficiency-bgColor2)
   );
-  animation: progress 2s ease-in-out forwards;
-  opacity: 0;
 }
 .skill-per.css {
   width: 95%;
@@ -519,15 +517,6 @@ div .check {
 .skill-per.reactjs {
   width: 90%;
   animation-delay: 0.3s;
-}
-@keyframes progress {
-  0% {
-    width: 0%;
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 .skill-per .tooltip {
   position: absolute;
