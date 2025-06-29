@@ -251,3 +251,32 @@ function moveToSlide(n) {
 window.onload = () => {
   showSlides();
 };
+
+// Default filter: show all
+filterSelection("all");
+
+function filterSelection(category) {
+  const projects = document.getElementsByClassName("projects");
+
+  for (let i = 0; i < projects.length; i++) {
+    const project = projects[i];
+    project.classList.remove("show");
+
+    // Show all or match category
+    if (category === "all" || project.classList.contains(category)) {
+      project.classList.add("show");
+    }
+  }
+}
+
+// Highlight active button
+const btnContainer = document.getElementById("myBtnContainer");
+const btns = btnContainer.getElementsByClassName("btn");
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    const current = btnContainer.querySelector(".active");
+    if (current) current.classList.remove("active");
+    this.classList.add("active");
+  });
+}

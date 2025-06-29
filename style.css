@@ -780,6 +780,33 @@ div .check {
   display: flex;
   flex-wrap: wrap;
 }
+.projects {
+  display: none;
+}
+
+.projects.show {
+  display: block;
+}
+#filterButton {
+  display: flex;
+  gap: 15px;
+}
+#filterButton button {
+  cursor: pointer;
+  background-color: var(--bg-color);
+  border: 1px solid var(--resume-bgColor);
+  color: var(--font-primary-color);
+  padding: 8px;
+  border-radius: 15px;
+}
+#filterButton button:hover {
+  background-color: var(--slidecard-p);
+  color: var(--view-i-color);
+}
+#page4 {
+  display: flex;
+  flex-direction: column;
+}
 
 /*certification*/
 /* Slideshow Container */
