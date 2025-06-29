@@ -1187,6 +1187,7 @@ footer div {
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    height: 100%;
   }
   nav #profile {
     width: 100%;
