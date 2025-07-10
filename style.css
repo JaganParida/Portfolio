@@ -42,6 +42,8 @@
   --contact-bgColor: #f1f1f1;
   --theme-i: #1e1e1f;
   --contactBorder: #d3d3dc;
+  --foter-border: #dadce0;
+  --filterButton: #c0c0c0;
 }
 .theme-dark {
   --bg-color: #1b1b1b;
@@ -80,6 +82,8 @@
   --contact-bgColor: #1e1e1f;
   --theme-i: #ebebeb;
   --contactBorder: #2a2929;
+  --foter-border: #2f2f2f;
+  --filterButton: #515151;
 }
 html {
   scroll-behavior: smooth;
@@ -600,6 +604,7 @@ div .check {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #3165ff;
+  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
 }
 .timeline-content h3 {
   font-size: 20px;
@@ -651,21 +656,36 @@ div .check {
   width: 100%;
 }
 .projects {
+  display: none;
+}
+.projects {
+  display: none;
   flex-direction: column;
   gap: 5px;
   flex-basis: 320px;
   height: 473px;
-  display: flex;
   border-radius: 15px;
   margin: 20px;
   padding: 15px;
   background-color: var(--bg-color);
-  border: 1px solid var(--projectsBorder-color);
+  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
+  border: 1px solid var(--contactBorder);
   cursor: pointer;
   opacity: 0;
   transform: translateY(80px);
   transition: transform 1.8s ease, opacity 1.8s ease;
 }
+.projects:hover {
+  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
+  border: 1px solid var(--contactBorder);
+}
+
+.projects.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .projects.visible {
   opacity: 1;
   transform: translateY(0);
@@ -772,25 +792,25 @@ div .check {
   display: flex;
   flex-wrap: wrap;
 }
-.projects {
-  display: none;
-}
-
-.projects.show {
-  display: block;
-}
 #filterButton {
   display: flex;
   gap: 15px;
 }
-#filterButton button {
+#filterButton .btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--filterButton);
+  color: var(--black-color);
   cursor: pointer;
-  background-color: var(--bg-color);
-  border: 1px solid var(--resume-bgColor);
-  color: var(--font-primary-color);
-  padding: 8px;
-  border-radius: 15px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
 }
+#filterButton .btn.active {
+  background-color: var(--resume-bgColor);
+  color: var(--view-i-color);
+}
+
 #filterButton button:hover {
   background-color: var(--slidecard-p);
   color: var(--view-i-color);
@@ -1064,11 +1084,11 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--skill-bgColor);
+  background-color: var(--header-bgColor);
   width: 100%;
   text-align: center;
   color: var(--font-primary-color);
-  padding: 20px;
+  border-top: 1px solid var(--foter-border);
 }
 footer div {
   width: 100%;

@@ -255,17 +255,24 @@ window.onload = () => {
 // Default filter: show all
 filterSelection("all");
 
-function filterSelection(category) {
+function filterSelection(category, event) {
   const projects = document.getElementsByClassName("projects");
 
+  // Remove "show" from all
   for (let i = 0; i < projects.length; i++) {
-    const project = projects[i];
-    project.classList.remove("show");
+    projects[i].classList.remove("show");
 
-    // Show all or match category
-    if (category === "all" || project.classList.contains(category)) {
-      project.classList.add("show");
+    if (category === "all" || projects[i].classList.contains(category)) {
+      projects[i].classList.add("show");
     }
+  }
+
+  // ===== New Part: Handle active button class =====
+  const buttons = document.querySelectorAll("#filterButton .btn");
+  buttons.forEach((btn) => btn.classList.remove("active")); // Remove active from all
+
+  if (event) {
+    event.currentTarget.classList.add("active"); // Add active to clicked button
   }
 }
 
