@@ -8,7 +8,7 @@
 :root {
   --bg-color: #f9fafb;
   --font-primary-color: #313131;
-  --header-bgColor: #e6e6e6;
+  --header-bgColor: #fff;
   --header-color: #343333;
   --navBar-bar: #4e4c4c;
   --typeWriter-color: #7423ff;
@@ -16,7 +16,7 @@
   --hire1-hover-color: #646af5;
   --hire2-color: #000;
   --skill-bgColor: #ffffff;
-  --primary-boxShadow: #c3c3c3;
+  --primary-boxShadow: #9b9b9b;
   --black-color: #000;
   --proficiency-bgColor1: #8000ff;
   --proficiency-bgColor2: #5c56ff;
@@ -39,8 +39,9 @@
   --slidecard-p: #313131;
   --slidecard-time: #4a4a4a;
   --input-border: #383838;
-  --contact-bgColor: #ebebeb;
+  --contact-bgColor: #f1f1f1;
   --theme-i: #1e1e1f;
+  --contactBorder: #d3d3dc;
 }
 .theme-dark {
   --bg-color: #1b1b1b;
@@ -53,7 +54,7 @@
   --hire1-hover-color: #5900b9;
   --hire2-color: #3165ff;
   --skill-bgColor: #1e1e1f;
-  --primary-boxShadow: #0000001a;
+  --primary-boxShadow: #000000d4;
   --black-color: #fff;
   --proficiency-bgColor1: #5c56ff;
   --proficiency-bgColor2: #8000ff;
@@ -78,6 +79,7 @@
   --input-border: #383838;
   --contact-bgColor: #1e1e1f;
   --theme-i: #ebebeb;
+  --contactBorder: #2a2929;
 }
 html {
   scroll-behavior: smooth;
@@ -115,6 +117,7 @@ header {
   padding: 8px;
   z-index: 1;
   font-size: 18px;
+  box-shadow: 0px 0px 6px var(--primary-boxShadow);
 }
 header a {
   justify-content: baseline;
@@ -389,7 +392,7 @@ div .check {
   color: var(--black-color);
   background-color: var(--skill-bgColor);
   position: relative;
-  box-shadow: var(--primary-boxShadow) 0px 0px 12px 4px;
+  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
@@ -460,7 +463,7 @@ div .check {
   margin: 0 200px;
   padding: 10px 20px;
   border-radius: 7px;
-  box-shadow: var(--primary-boxShadow) 0px 0px 12px 4px;
+  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
 }
 .proficiency .skill-box {
   width: 100%;
@@ -805,7 +808,7 @@ div .check {
   margin: 60px auto;
   background-color: var(--slideshow-bgColor);
   border-radius: 25px;
-  box-shadow: 0 0 20px var(--primary-boxShadow);
+  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
   overflow: hidden;
   padding: 20px;
 }
@@ -971,6 +974,7 @@ div .check {
   border-radius: 20px;
   width: 450px;
   background: var(--contact-bgColor);
+  border: 1px solid var(--contactBorder);
 }
 form {
   display: flex;
@@ -1050,7 +1054,7 @@ form button:hover {
   text-align: center;
 }
 .contact p {
-  color: var(--resume-bgColor);
+  color: var(--projects-p);
   margin-bottom: 10px;
 }
 
