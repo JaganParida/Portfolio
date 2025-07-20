@@ -675,17 +675,11 @@ div .check {
   transform: translateY(80px);
   transition: transform 1.8s ease, opacity 1.8s ease;
 }
-.projects:hover {
-  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
-  border: 1px solid var(--contactBorder);
-}
-
 .projects.show {
   display: flex;
   opacity: 1;
   transform: translateY(0);
 }
-
 .projects.visible {
   opacity: 1;
   transform: translateY(0);
