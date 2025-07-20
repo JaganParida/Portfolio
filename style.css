@@ -44,6 +44,10 @@
   --contactBorder: #d3d3dc;
   --foter-border: #dadce0;
   --filterButton: #c0c0c0;
+  --box-shadow-1: 0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.12);
+  --box-shadow-2: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.12);
+  --box-shadow: var(--box-shadow-1), var(--box-shadow-2);
+  --box-shadow-hover: 0 12px 30px 0 rgba(0, 0, 0, 0.2);
 }
 .theme-dark {
   --bg-color: #1b1b1b;
@@ -84,6 +88,10 @@
   --contactBorder: #2a2929;
   --foter-border: #2f2f2f;
   --filterButton: #515151;
+  --box-shadow-1: 0 0.0625rem 0.25rem 0 rgba(0, 0, 0, 0.586);
+  --box-shadow-2: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.586);
+  --box-shadow: var(--box-shadow-1), var(--box-shadow-2);
+  --box-shadow-hover: 0 12px 30px 0 rgba(0, 0, 0, 0.586);
 }
 html {
   scroll-behavior: smooth;
@@ -668,12 +676,19 @@ div .check {
   margin: 20px;
   padding: 15px;
   background-color: var(--bg-color);
-  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
+  box-shadow: var(--box-shadow);
   border: 1px solid var(--contactBorder);
   cursor: pointer;
   opacity: 0;
   transform: translateY(80px);
   transition: transform 1.8s ease, opacity 1.8s ease;
+}
+.projects:hover {
+  transform: translate3d(0, -10px, 0);
+  box-shadow: var(--box-shadow-hover);
+  transition-property: box-shadow, transform;
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.29, 0.99);
 }
 .projects.show {
   display: flex;
