@@ -403,8 +403,8 @@ div .check {
   padding: 20px;
   color: var(--black-color);
   background-color: var(--skill-bgColor);
+  border: 1px solid var(--projectsBorder-color);
   position: relative;
-  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
@@ -608,11 +608,10 @@ div .check {
   margin: 6px 0 15px;
 }
 .timeline-content {
-  background-color: var(--bg-color);
+  background: rgba(34, 78, 255, 0.244);
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #3165ff;
-  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
 }
 .timeline-content h3 {
   font-size: 20px;
@@ -809,20 +808,20 @@ div .check {
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
-  background-color: var(--filterButton);
+  border: 1px solid var(--font-primary-color);
+  background-color: var(--bg-color);
   color: var(--black-color);
   cursor: pointer;
   margin: 0 5px;
   transition: background-color 0.3s;
 }
 #filterButton .btn.active {
-  background-color: var(--resume-bgColor);
-  color: var(--view-i-color);
+  border-bottom: 4px solid var(--proficiency-bgColor1);
 }
 
 #filterButton button:hover {
-  background-color: var(--slidecard-p);
-  color: var(--view-i-color);
+  background-color: var(--skillBar-bgColor);
+  color: var(--projects-viewLink);
 }
 #page4 {
   display: flex;
