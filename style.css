@@ -59,7 +59,7 @@
   --resume-bgColor: #8000ff;
   --hire1-hover-color: #5900b9;
   --hire2-color: #3165ff;
-  --skill-bgColor: #1e1e1f;
+  --skill-bgColor: #05050529;
   --primary-boxShadow: #000000d4;
   --black-color: #fff;
   --proficiency-bgColor1: #5c56ff;
@@ -403,7 +403,7 @@ div .check {
   padding: 20px;
   color: var(--black-color);
   background-color: var(--skill-bgColor);
-  border: 1px solid var(--projectsBorder-color);
+  border: 1px solid #634cff;
   position: relative;
   opacity: 0;
   transform: translateY(30px);
@@ -608,7 +608,7 @@ div .check {
   margin: 6px 0 15px;
 }
 .timeline-content {
-  background: rgba(34, 78, 255, 0.244);
+  background: #0033ff17;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #3165ff;
@@ -713,7 +713,7 @@ div .check {
   width: 100%;
   transition: transform 0.5s ease-in-out;
 }
-.projects .img:hover img {
+.projects:hover img {
   transform: scale(1.1);
 }
 .projects .time {
@@ -721,6 +721,7 @@ div .check {
   color: var(--projects-time);
   font-size: 15px;
 }
+
 .projects span {
   height: 24px;
   display: flex;
@@ -729,8 +730,8 @@ div .check {
   background-color: var(--projectsSpan-bgColor);
   font-size: 12px;
   color: var(--projectsSpan-color);
-  border-radius: 10px;
-  padding: 13px 9px;
+  border-radius: 8px;
+  padding: 12px 6px;
   margin: 4px 10px 2px 5px;
   border: none;
   font-weight: 500;
@@ -799,6 +800,9 @@ div .check {
 .uses {
   display: flex;
   flex-wrap: wrap;
+}
+.projects .viewLink .btn-disable {
+  cursor: not-allowed;
 }
 #filterButton {
   display: flex;
