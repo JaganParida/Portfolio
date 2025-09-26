@@ -15,7 +15,7 @@
   --resume-bgColor: #5c56ff;
   --hire1-hover-color: #646af5;
   --hire2-color: #000;
-  --skill-bgColor: #ffffff;
+  --skill-bgColor: #b19fff3b;
   --primary-boxShadow: #9b9b9b;
   --black-color: #000;
   --proficiency-bgColor1: #8000ff;
@@ -59,7 +59,7 @@
   --resume-bgColor: #8000ff;
   --hire1-hover-color: #5900b9;
   --hire2-color: #3165ff;
-  --skill-bgColor: #05050529;
+  --skill-bgColor: #1b00963b;
   --primary-boxShadow: #000000d4;
   --black-color: #fff;
   --proficiency-bgColor1: #5c56ff;
@@ -471,7 +471,6 @@ div .check {
   height: 100%;
   position: relative;
   width: 100%;
-  background: var(--skill-bgColor);
   margin: 0 200px;
   padding: 10px 20px;
   border-radius: 7px;
