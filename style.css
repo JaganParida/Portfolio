@@ -376,6 +376,7 @@ div .check {
 }
 
 /*Skills*/
+
 #skill-list {
   display: flex;
   width: 100%;
@@ -411,6 +412,18 @@ div .check {
   flex-direction: column;
   align-items: center;
   margin: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 888px) {
+  #skill-list {
+    padding-left: 50px;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+  #skill-list::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /*proficiency*/
@@ -1372,11 +1385,6 @@ footer div {
   }
   #skill-list {
     display: flex;
-  }
-  #skill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   .first {
     animation: appear 5s linear;
