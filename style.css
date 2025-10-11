@@ -406,6 +406,24 @@ div .check {
   height: 120px;
   width: 120px;
 }
+.webdev.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.first,
+.second {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.second {
+  transform: translateX(30px);
+}
+.first.visible,
+.second.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 @media (min-width: 320px) and (max-width: 888px) {
   html,

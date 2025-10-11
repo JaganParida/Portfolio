@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   };
   const skillsObserver = handleIntersect(0.4);
-  document.querySelectorAll(".skills, .first, .second").forEach((el) => {
+  document.querySelectorAll("#skill-list, .first, .second").forEach((el) => {
     skillsObserver.observe(el);
   });
   const projectsObserver = handleIntersect(0.2);
