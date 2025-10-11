@@ -383,6 +383,7 @@ div .check {
   align-items: center;
   height: 100%;
   flex-wrap: wrap;
+  gap: 10px;
 }
 #skill-list h1 {
   font-size: 30px;
@@ -392,58 +393,22 @@ div .check {
   width: 100%;
   text-align: center;
 }
-.skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 500px;
-  border-radius: 12px;
-  margin: 30px;
-  padding: 20px;
-  color: var(--black-color);
-  background-color: var(--skill-bgColor);
-  border: 1px solid #634cff;
-  position: relative;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-.skills.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.first,
-.second {
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-.second {
-  transform: translateX(30px);
-}
-.first.visible,
-.second.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-.skill {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.skills img {
-  height: 30px;
+
+#skill-list img {
+  height: 50px;
   margin-right: 5px;
 }
-.skills #webdev {
-  border: 1px solid #595a74;
+#skill-list #webdev {
+  background-color: var(--skill-bgColor);
+  border: 1px solid #634cff;
   border-radius: 15px;
-  padding: 5px 11px;
+  padding: 30px 20px;
   font-size: 12px;
+  color: white;
+  gap: 10px;
   justify-content: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 5px;
 }
