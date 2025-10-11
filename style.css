@@ -403,9 +403,9 @@ div .check {
   background-color: var(--skill-bgColor);
   border: 1px solid #634cff;
   border-radius: 15px;
-  padding: 30px 20px;
+  padding:18px;
   font-size: 12px;
-  color: white;
+  color:var(--font-primary-color);
   gap: 10px;
   justify-content: center;
   display: flex;
@@ -416,13 +416,40 @@ div .check {
 
 @media (min-width: 320px) and (max-width: 888px) {
   #skill-list {
-    padding-left: 50px;
-    width: 100%;
+    display: flex;
+    gap: 25px;
     flex-wrap: nowrap;
-    overflow: auto;
+    width: max-content;
+    animation: reelScroll 20s linear infinite;
   }
+
+  /* Hide scrollbar */
   #skill-list::-webkit-scrollbar {
     display: none;
+  }
+
+  #webdev {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+  }
+
+  @keyframes reelScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  #skill-list:hover {
+    animation-play-state: paused;
   }
 }
 
@@ -452,7 +479,6 @@ div .check {
   margin: 0 200px;
   padding: 10px 20px;
   border-radius: 7px;
-  box-shadow: var(--primary-boxShadow) 0px 0px 16px -3px;
 }
 .proficiency .skill-box {
   width: 100%;
