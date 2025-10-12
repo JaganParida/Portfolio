@@ -396,7 +396,7 @@ div .check {
   height: 50px;
 }
 #skill-list .webdev {
-  background-color: var(--webdev-bg);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.588));
   border: 1px solid var(--webdev-border);
   border-radius: 15px;
   padding: 10px;
