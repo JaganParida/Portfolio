@@ -27,6 +27,8 @@
   --projectsBorder-color: #b8b8b8;
   --projectsSpan-bgColor: #a7a7a7;
   --projectsSpan-color: #000000d9;
+  --webdev-bg: #e0e0e0;
+  --webdev-border: #b8b8b8;
   --projects-h3: #006dff;
   --projects-p: #2c2c2c;
   --projects-time: #353535;
@@ -62,6 +64,8 @@
   --skill-bgColor: #1b00963b;
   --primary-boxShadow: #000000d4;
   --black-color: #fff;
+  --webdev-bg: #303030;
+  --webdev-border: #3f3f3f;
   --proficiency-bgColor1: #5c56ff;
   --proficiency-bgColor2: #8000ff;
   --skillBar-bgColor: #313131;
@@ -392,8 +396,8 @@ div .check {
   height: 50px;
 }
 #skill-list .webdev {
-  background-color: var(--skill-bgColor);
-  border: 1px solid #634cff;
+  background-color: var(--webdev-bg);
+  border: 1px solid var(--webdev-border);
   border-radius: 15px;
   padding: 10px;
   font-size: 12px;
