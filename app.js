@@ -154,15 +154,6 @@ function scrollFunctionBottom() {
 function topFunction() {
   document.documentElement.scrollTop = 0;
 }
-// header - visible - on - scroll
-function scrollFunctionTop() {
-  const header = document.querySelector("header");
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    header.style.top = "0";
-  } else {
-    header.style.top = "-100px";
-  }
-}
 
 //slider
 let slideIndex = 0;

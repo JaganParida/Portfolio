@@ -204,7 +204,6 @@ nav #profile {
 }
 header {
   position: fixed;
-  top: -100px;
   width: 100%;
   transition: top 0.4s ease-in-out;
   z-index: 999;
